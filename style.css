@@ -97,3 +97,36 @@ header > * > a {
 	font-weight: bold;
     text-shadow: 1px 1px 0 #fff;
 }
+.woodWall {
+	background-image: url('img/woodenBox.jpg');
+	width: 100%;
+}
+.woodWall > p {
+	text-align: center;
+	padding-top: 2.2rem;
+	font-size: 12px;
+}
+#emailForm {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 3.5rem;
+	position: relative;
+}
+#emailForm input[type=email]{
+	height: 2rem;
+	width: 20rem;
+	padding-left: 2px;
+	border-radius: 1.5rem;
+	font-style: italic;
+	font-size: 0.75rem;
+    opacity: 0.9;
+}
+#emailForm button {
+	position: absolute;
+	width: 5.6rem;
+	height: 2rem;
+	border-radius: 1.5rem;
+	color: #e7ff00;
+	background-color: #7f7d7f;
+
+}
