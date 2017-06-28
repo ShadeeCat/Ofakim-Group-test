@@ -5,23 +5,30 @@
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<title>
-		Ofakim-Group landing page
-	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Ofakim-Group landing page</title>
 </head>
 <body>
 	<header>
 		<h1>Coming Soon !</h1>
-		<p>We are launching soon, so signup &amp; get notified!</p>	
+		<p>We are launching soon, so signup &amp; get notified!</p>
 	</header>
 	<main>
 		<header>
 			<nav>
-				<a href="/about-us.html">ABOUT US</a>
-				<a href="/contact-us.html">CONTACT US</a>
-				<a href="/lorem-ipsum.html">LOREM IPSUM</a>
-				<a href="/lorem-ipsum.html">LOREM IPSUM</a>
-				<a href="/lorem-ipsum.html">LOREM IPSUM</a>
+				<a href="/about-us.html" class="lik">ABOUT US</a>
+				<a href="/contact-us.html" class="link">CONTACT US</a>
+				<a href="/lorem-ipsum.html" class="link">LOREM IPSUM</a>
+				<div class="link outer-link-container">
+					<a href="/lorem-ipsum.html" class="link outer-link">OUTER LINK</a>
+					<div class="inner-link-container">
+						<a href="/lorem-inner.html" class="inner-link">INNER LINK</a>
+						<a href="/lorem-inner.html" class="inner-link">INNER LINK</a>
+						<a href="/lorem-inner.html" class="inner-link">INNER LINK</a>
+						<a href="/lorem-inner.html" class="inner-link">INNER LINK</a>
+					</div>
+				</div>
+				<a href="/lorem-ipsum.html" class="link">LOREM IPSUM</a>
 			</nav>
 			<form id="searchForm">
 				<button type="button">&#128269;</button>
@@ -57,7 +64,44 @@
 				</form>
 			</section>
 		</main>
-		<footer></footer>
+		<footer>
+			<nav class="copyright">
+				<p>Copyright. All rights Reserved</p>
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">terms of use</button>
+			<div id="myModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">LOREM IPSUM</h4>
+			      </div>
+			      <div class="modal-body">
+				      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto molestias tempore odio quod fuga! Quisquam delectus obcaecati, dolorem. Laboriosam dignissimos cumque vero nobis nemo minima sapiente minus repudiandae quia voluptatum!</p>
+				      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae nostrum temporibus deleniti vel consectetur necessitatibus earum, placeat, impedit vitae soluta eius dignissimos voluptate similique non ducimus, est inventore repellat. Laborum!</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+			</nav>
+			<nav class="followUs">
+					<p>Follow us:</p>
+					<a href="facebook.html" class="facebook"></a>
+					<a class="twitter" href="twitter.html"></a>
+					<a class="pinterest" href="pinterest.html"></a>
+			
+
+		</footer>
 	</main>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script>
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		    event.preventDefault();
+		    $(this).ekkoLightbox();
+		});
+	</script>
 </body>
 </html>

@@ -33,10 +33,17 @@ main > header > nav {
     justify-content: space-around;
     flex-grow: 1;
 }
-header > * > a {
+main header > * > .link,
+main header > * > .link a {
 	text-decoration: none;
 	font-size: 1.16rem;
     color: currentcolor;
+}
+main header .outer-link-container {position: relative;}
+main header .inner-link-container {position: absolute;display: none;}
+main header .outer-link-container:hover .inner-link-container,
+main header .outer-link-container:focus .inner-link-container {
+	display: block;
 }
 #searchForm {
 	position: relative;
