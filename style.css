@@ -8,20 +8,20 @@ body > header {
 }
 body > header > h1 {
 	font-family: lobster;
-	font-size: 6rem;
+	font-size: 7rem;
 	margin-bottom: 0px;
 }
 body > header > p {
-	font-size: 1rem;
+	font-size: 1.8rem;
 	margin-bottom: 4rem;
 }
 body > main {
 	background-color: white;
 	padding-top: 1rem;
-	padding-bottom: 1rem;
 	margin: 0 auto;
 	width: 80%;
 	box-sizing: border-box;
+	border-radius: 1rem;
 }
 main > header {
 	display: flex;
@@ -36,7 +36,7 @@ main > header > nav {
 main header > * > .link,
 main header > * > .link a {
 	text-decoration: none;
-	font-size: 1.16rem;
+	font-size: 1.3rem;
     color: currentcolor;
 }
 main header .outer-link-container {position: relative;}
@@ -82,7 +82,7 @@ main header .outer-link-container:focus .inner-link-container {
 }
 .content > p {
 	font-family: roboto;
-	font-size: 1rem;
+	font-size: 2rem;
 	color: #b3c301;
 }
 .time {
@@ -94,10 +94,15 @@ main header .outer-link-container:focus .inner-link-container {
 	background: linear-gradient(to top, #f5f0f3 10%, #fff 20%);
 }
 .circle {
-	width: 100px;
-    height: 100px;
+    --diameter: 100px;
+    width: var(--diameter);
+    height: var(--diameter);
     border-radius: 50px;
     background: #e4e2e4;
+    line-height: var(--diameter);
+    text-align: center;
+    font-size: 6rem;
+    color: #b3c301;
 }
 .progress-label {
 	text-align: center;    
@@ -107,33 +112,83 @@ main header .outer-link-container:focus .inner-link-container {
 .woodWall {
 	background-image: url('img/woodenBox.jpg');
 	width: 100%;
+	padding-bottom: 5rem;
+	font-size: 1.5rem;
+	border-radius: 0 0 1rem 1rem;
 }
 .woodWall > p {
 	text-align: center;
 	padding-top: 2.2rem;
-	font-size: 12px;
 }
 #emailForm {
+	width: 40%;
+	height: 3rem;
+	margin: 2rem auto 0;
+	display: flex;
 	text-align: center;
-	padding-top: 2rem;
-	padding-bottom: 3.5rem;
 	position: relative;
 }
 #emailForm input[type=email]{
-	height: 2rem;
-	width: 20rem;
+	width: 90%;
 	padding-left: 2px;
 	border-radius: 1.5rem;
 	font-style: italic;
-	font-size: 0.75rem;
-    opacity: 0.9;
+	opacity: 0.9;
 }
 #emailForm button {
 	position: absolute;
-	width: 5.6rem;
-	height: 2rem;
+	right: 0.5rem;
+	height: inherit;
 	border-radius: 1.5rem;
 	color: #e7ff00;
 	background-color: #7f7d7f;
-
+}
+footer {
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	color: #807e80;
+	font-size: 1.5rem;
+	border-radius: 0 0 1rem 1rem;
+}
+.copyright {
+    display: flex;
+    align-items: baseline;
+    color: #b9b7b9;
+    padding-left: 3rem;
+    padding-top: 1.2rem;
+}
+.copyright > button[type=button] {
+	background: none;
+    border: none;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 2px solid currentcolor;
+}
+.followUs {
+    display: flex;
+    align-items: flex-end;
+    width: 25%;
+    justify-content: space-around;
+    padding-right: 3rem;
+}
+.facebook {
+	background: url('img/sprite.png') no-repeat -90px 0;
+	width: 37px;
+	height: 37px;
+}
+.twitter {
+	background: url('img/sprite.png') no-repeat 0 0;
+	width: 37px;
+	height: 37px;
+}
+.pinterest {
+	background: url('img/sprite.png') no-repeat -45px 0;
+	width: 37px;
+	height: 37px;
 }
