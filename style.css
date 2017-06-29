@@ -1,10 +1,12 @@
 body {
 	margin: 0;
 	background-color: #e3e3e3;
+	background-image: url(img/effect1.png), url(img/effect2.png), url(img/effect2.png);
+	background-position: 40% 0%, 80% 12%, 80% 110%;
+	background-repeat: no-repeat;
 	font-family: Arial, Times New Roman, Georgia, Serif;
-	background-image: url('img/effect1');
 }
-body > header {	
+body > header {
 	text-align: center;
 }
 body > header > h1 {
@@ -18,15 +20,17 @@ body > header > p {
 }
 body > main {
 	background-color: white;
-	padding-top: 1rem;
 	margin: 0 auto;
 	width: 80%;
 	box-sizing: border-box;
 	border-radius: 1rem;
+	color: #b3c301;
 }
 main > header {
 	display: flex;
-	color: #b3c301;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	border-bottom: 2px solid #c8c6c8;
 }
 main > header > nav {
@@ -76,53 +80,72 @@ main header .outer-link-container:focus .inner-link-container {
 	outline-color: currentcolor;
 	color: currentcolor;
 }
-.content {
+section.count-down {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	background: linear-gradient(to top, #f5f0f3 10%, #fff 20%);
+}
+.days-container {
+    --circle-diameter: 100px;
+	display: flex;
+	justify-content: space-between;
+	width: calc(var(--circle-diameter) * 5.5);
+}
+.count-down-unit {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.content > p {
+.count-down-unit > p {
 	font-family: roboto;
 	font-size: 2rem;
-	color: #b3c301;
-}
-.time {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	background-color: white;
-	padding: 10% 20% 5% 20%;
-	background: linear-gradient(to top, #f5f0f3 10%, #fff 20%);
 }
 .circle {
-    --diameter: 100px;
-    width: var(--diameter);
-    height: var(--diameter);
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
     border-radius: 50px;
     background: #e4e2e4;
-    line-height: var(--diameter);
+    line-height: var(--circle-diameter);
     text-align: center;
     font-size: 6rem;
-    color: #b3c301;
 }
 .progress-label {
-	text-align: center;    
-	font-weight: bold;
-    text-shadow: 1px 1px 0 #fff;
+	--half-height: 1.5rem;
+	display: flex;
+	width: 60%;
+	height: calc(var(--half-height) * 2);
+	margin-top: 2rem;
+	border-radius: var(--half-height);
+	box-shadow: inset 0px 0px 3px rgba(0,0,0,.5);
 }
+.progress-label .progress-strip {
+	border-radius: var(--half-height);
+	background-color: currentColor;
+}
+.progress-label .progress-percentage {
+	flex-grow: 1;
+	text-align: center;
+	line-height: calc(var(--half-height) * 2);
+}
+
 .woodWall {
 	background-image: url('img/woodenBox.jpg');
 	width: 100%;
 	padding-bottom: 5rem;
 	font-size: 1.5rem;
 	border-radius: 0 0 1rem 1rem;
+	background-position: 0 -5px;
 }
 .woodWall > p {
 	text-align: center;
 	padding-top: 2.2rem;
+	color: #333;
 }
 #emailForm {
-	width: 40%;
+	width: 50%;
 	height: 3rem;
 	margin: 2rem auto 0;
 	display: flex;
@@ -131,7 +154,7 @@ main header .outer-link-container:focus .inner-link-container {
 }
 #emailForm input[type=email]{
 	width: 90%;
-	padding-left: 2px;
+	padding-left: 1rem;
 	border-radius: 1.5rem;
 	font-style: italic;
 	opacity: 0.9;
@@ -140,8 +163,8 @@ main header .outer-link-container:focus .inner-link-container {
 	position: absolute;
 	right: 0.5rem;
 	height: inherit;
+	padding: 0 1.5rem;
 	border-radius: 1.5rem;
-	color: #e7ff00;
 	background-color: #7f7d7f;
 }
 footer {
@@ -164,6 +187,9 @@ footer {
     padding-left: 3rem;
     padding-top: 1.2rem;
 }
+@media screen and (max-width: 776px) {
+	.copyright {width: 100%;}
+}
 .copyright > button[type=button] {
 	background: none;
     border: none;
@@ -174,9 +200,16 @@ footer {
 .followUs {
     display: flex;
     align-items: flex-end;
-    width: 25%;
+    width: 38%;
     justify-content: space-around;
     padding-right: 3rem;
+}
+@media screen and (max-width: 776px) {
+	.followUs {width: 100%;}
+}
+.icon:hover {
+	background-color: blue;  /*it's dont looking good */
+	border-radius: 2rem;
 }
 .facebook {
 	background: url('img/sprite.png') no-repeat -90px 0;
